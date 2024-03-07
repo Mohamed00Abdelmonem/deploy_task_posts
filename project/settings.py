@@ -57,6 +57,8 @@ REST_FRAMEWORK = {
     
 }
 
+ALLOWED_HOSTS = ['https://web-production-453f.up.railway.app', 'https://web-production-453f.up.railway.app/', 'https://web-production-453f.up.railway.app/']
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
