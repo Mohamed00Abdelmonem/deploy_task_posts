@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["web-production-453f.up.railway.app"]
+ALLOWED_HOSTS = ["web-production-be13.up.railway.app"]
 #test depoloy
 
 # Application definition
