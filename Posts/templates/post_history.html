@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post History</title>
+</head>
+<body>
+    <h1>Post History</h1>
+    <p>Post ID: {{ post_instance.id }}</p>
+    <p>Current Caption: {{ post_instance.caption }}</p>
+
+    <h2>Historical Data:</h2>
+    <ul>
+      {% for record in historical_data %}
+            <li>
+                <p>Change Date: {{ record.history_date }}</p>
+                <p>User: {{ record.history_user }}</p>
+                <p>Action: {% if record.history_type == '+' %} Created {% elif record.history_type == '-' %} Deleted {% else %} Updated {% endif %}</p>
+                <p>Caption: {{ record.caption }}</p>
+            </li>
+            <hr>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
